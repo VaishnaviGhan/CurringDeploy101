@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule Generation</title>
+</head>
+<body>
+    <h1>Schedule Generation Result</h1>
+
+    {% if schedules_generated %}
+        <p>Scheduling for pole curing has been successfully generated.</p>
+        <ul>
+            {% for schedule in schedules_generated %}
+                <li>
+                    Pole: {{ schedule.pole }}
+                    Start Date: {{ schedule.start_date }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No schedules were generated. There are no poles that require curing at this time.</p>
+    {% endif %}
+
+    <p><a href="{% url 'generate_curing_schedules' %}">Generate Schedules Again</a></p>
+</body>
+</html>

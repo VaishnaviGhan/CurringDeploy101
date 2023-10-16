@@ -1,0 +1,4 @@
+<QuerySet []>
+<QuerySet [<Pole: Pole object (1)>]>
+Pole object (1)
+2023-09-24 16:27:11.121810+00:00
